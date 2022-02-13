@@ -1,0 +1,105 @@
+.roadmap-third {
+	&.visible {
+		background-image: url("../img/roadmap-third-bg.png");
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size: contain;
+		@media(max-width:$md3){
+			background-size: 100% 60%;
+		}
+	}
+
+	padding-top: rem(80px);
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(360deg, rgb(0, 0, 0) 34.35%, rgba(0, 0, 0, 0.573) 68.21%, rgba(0, 0, 0, 0) 94.82%);
+		transform: matrix(1, 0, 0, 1, 0, 0);
+		width: 100%;
+		height: rem(140px);
+	}
+	&__content {
+		padding: rem(10px) rem(10px) rem(10px) rem(3px);
+	}
+	&__actions {
+		min-width: 0px;
+	}
+	&__img--1 {
+		background-image: url("../img/roadmap-first-slide-1.png");
+	}
+
+	&__img--2 {
+		background-image: url("../img/roadmap-first-slide-2.png");
+	}
+
+	&__img--3 {
+		background-image: url("../img/roadmap-first-slide-1.png");
+	}
+
+	&__paragraph {
+		color: $blackDark;
+	}
+
+	&__paragraph--1 {
+		margin-bottom: rem(25px);
+	}
+
+	&__paragraph--2 {
+		margin-bottom: rem(15px);
+	}
+}
+
+@media (min-width: 1100px) {
+	.roadmap-third {
+		&__title-point {
+			left: rem(-73px);
+		}
+	}
+}
+
+@media (max-width: 2400px) {
+	.roadmap-third {
+		&__title-point {
+			left: rem(-55px);
+		}
+	}
+}
+@media (max-width: 1262px) {
+	.roadmap-third {
+		&__title-point {
+			left: rem(-75px);
+		}
+	}
+}
+@media (min-width: $md2) {
+	.roadmap-third {
+		&__content {
+			margin-bottom: rem(290px);
+		}
+	}
+}
+@media (max-width: $md2) {
+	.roadmap-third {
+		padding-top: rem(60px);
+		padding-bottom: rem(20px);
+
+		&__btn {
+			color: #fff;
+		}
+	}
+}
+
+@media (max-width: $md3) {
+	.roadmap-third {
+		background-size: 100% 35%;
+		padding-top: rem(20px);
+
+		&::before {
+			height: 20%;
+		}
+	}
+}

@@ -1,0 +1,87 @@
+.roadmap-sixth {
+	color: #fff;
+	padding-bottom: rem(130px);
+	z-index: 1;
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: -2;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(360deg, rgb(0, 0, 0) 34.35%, rgba(0, 0, 0, 0.573) 68.21%, rgba(0, 0, 0, 0) 94.82%);
+		transform: matrix(1, 0, 0, 1, 0, 0);
+		height: 100%;
+	}
+	&.visible {
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-image: url("../img/cloud.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			height: rem(170px);
+		}
+	}
+
+	&__actions {
+		min-width: 0px;
+	}
+	&__text {
+		margin-bottom: rem(35px);
+	}
+
+	&__img--1 {
+		background-image: url("../img/roadmap-fifth-slide-1.png");
+	}
+
+	&__img--2 {
+		background-image: url("../img/roadmap-fifth-slide-2.png");
+	}
+
+	&__img--3 {
+		background-image: url("../img/roadmap-fifth-slide-3.png");
+	}
+	&__service-item {
+		border-color: #bababa70;
+	}
+	&__service-desc {
+		color: #bababad8;
+	}
+}
+
+@media (max-width: 2400px) {
+	.roadmap-sixth {
+		&__title-point {
+			left: rem(-70px);
+		}
+	}
+}
+
+@media (max-width: $md2) {
+	.roadmap-sixth {
+		padding-bottom: rem(90px);
+	}
+}
+@media (max-width: $md3) {
+	.roadmap-sixth {
+		padding-bottom: rem(50px);
+
+		&::before {
+			height: rem(120px);
+		}
+	}
+}
+
+@media (max-width: $md4) {
+	.roadmap-sixth {
+		&::before {
+			height: rem(100px);
+		}
+	}
+}

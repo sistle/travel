@@ -1,0 +1,16 @@
+.social {
+	&__link {
+		color: #fff;
+		display: block;
+		font-size: rem(24px);
+		transition: color 0.3s ease;
+		&:focus {
+			color: $orange;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+}

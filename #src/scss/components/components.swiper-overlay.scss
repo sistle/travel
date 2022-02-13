@@ -1,0 +1,126 @@
+.intro-slider,
+.roadmap-first,
+.roadmap-second,
+.roadmap-third,
+.roadmap-fourth,
+.roadmap-fifth,
+.roadmap-sixth,
+.roadmap-seventh {
+	.swiper {
+		min-width: 0;
+	}
+	.swiper-wrapper {
+		margin-bottom: rem(32px);
+		@media (max-width: $md2) {
+			margin-bottom: rem(20px);
+		}
+	}
+	.swiper-slide {
+		height: rem(280px);
+
+		display: flex;
+		align-items: flex-end;
+
+		transition: all 0.7s;
+
+		transform: scale(0.9);
+		&.swiper-slide-active {
+			transform: scale(1) translateZ(0);
+			will-change: transform;
+			&::before {
+				opacity: 0.6;
+			}
+		}
+		&.swiper-slide-duplicate-next {
+			opacity: 0;
+		}
+		&.swiper-slide-prev {
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: -1;
+			background: linear-gradient(179.37deg, #000000 1.87%, rgba(0, 0, 0, 0.572235) 58.73%, rgba(0, 0, 0, 0) 94.86%);
+			transform: matrix(1, 0, 0, -1, 0, 0);
+			height: 100%;
+			transition: opacity 0.7s;
+		}
+		@media (max-width: $md3) {
+			height: rem(230px);
+		}
+		@media (orientation: landscape) and(max-width:$md3) {
+			height: rem(180px);
+		}
+		@media (max-width: $md4) {
+			height: rem(220px);
+			&.swiper-slide-next,
+			&.swiper-slide-prev {
+				opacity: 0.3;
+				transition: opacity 0.3s ease;
+			}
+		}
+	}
+	.swiper-slide-img {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -2;
+	}
+	.swiper-slide-content {
+		padding: rem(14px);
+	}
+}
+
+.swiper-slide-text,
+.swiper-slide-capture {
+	-webkit-font-smoothing: antialiased;
+	backface-visibility: hidden;
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+.swiper-slide-capture {
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: rem(5px);
+}
+.swiper-slide-text {
+	color: #bdbdbd;
+	font-size: rem(14px);
+}
+.swiper-control {
+	display: flex;
+	gap: rem(16px);
+	padding: 0px rem(10px);
+	pointer-events: none;
+	&__btn {
+		font-size: rem(11px);
+		border-radius: 50%;
+		width: rem(40px);
+		height: rem(40px);
+		pointer-events: auto;
+	}
+	@media (min-width: $md1) {
+		padding: 0px rem(18px);
+	}
+	@media (max-width: $md3) {
+		padding: 0px;
+		justify-content: center;
+		gap: rem(30px);
+		&__btn {
+			font-size: rem(14px);
+			width: rem(50px);
+			height: rem(50px);
+		}
+	}
+}

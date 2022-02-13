@@ -1,0 +1,90 @@
+//<BUTTONS >====================================================================================================
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	font-family: inherit;
+	text-align: center;
+
+	color: inherit;
+	outline: none;
+	cursor:pointer;
+	border: 1px solid;
+	padding: rem(16px) rem(15px);
+	border-radius: rem(50px);
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+	&:focus {
+		border-color:$orange;
+	}
+	&--orange {
+		border: 0px;
+		font-size: rem(14px);
+		background-color: $orange;
+		color: #fff;
+		border-radius: 5px;
+		&:focus {
+			background-color: #df5421;
+		}
+	}
+
+	&[disabled] {
+		cursor: not-allowed;
+	}
+}
+@media (any-hover: hover) {
+	.btn {
+		&:hover {
+			color: $orange;
+		}
+		&--orange {
+			&:hover {
+				color: #fff;
+				background-color: #df5421;
+			}
+		}
+	}
+}
+.travel-btn {
+	&__wrapper {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(18px);
+		color: $titleColor;
+	}
+
+	&__link {
+		color: inherit;
+		font-size: rem(18px);
+		text-decoration: underline;
+	}
+	&__link,
+	&__arrow {
+		transition: color 0.3s ease 0s;
+	}
+	&__arrow {
+		@extend %flex-center;
+		border: 1px solid;
+		height: rem(50px);
+		width: rem(50px);
+		border-radius: 50%;
+		font-size: rem(20px);
+	}
+}
+@media (any-hover: hover) {
+	.travel-btn {
+		&__link {
+			&:hover {
+				color: $orange;
+			}
+		}
+		&__arrow {
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+}
+//</BUTTONS>====================================================================================================

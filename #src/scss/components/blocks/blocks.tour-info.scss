@@ -1,0 +1,227 @@
+.tour-info {
+	&__title {
+		font-size: rem(64px);
+		line-height: 1.12;
+		margin-bottom: rem(60px);
+	}
+
+	&__inner {
+		margin-bottom: rem(96px);
+		padding-top: rem(120px);
+	}
+	&__main {
+		display: grid;
+		grid-template: auto auto/ 1fr rem(241px);
+		grid-template-areas:
+			"prices prices data"
+			" wrapper wrapper data";
+		column-gap: rem(137px);
+		row-gap: rem(70px);
+		padding: rem(0px) rem(70px) rem(134px) 0px;
+		border-bottom: 4px solid $blackDark;
+	}
+	&__wrapper {
+		display: flex;
+		gap: rem(40px);
+		grid-area: wrapper;
+	}
+	&__prices {
+		grid-area: prices;
+	}
+
+	&__data {
+		grid-area: data;
+	}
+
+	&__includes {
+		flex: 1 1 45%;
+	}
+	&__options {
+		flex: 0 1 55%;
+	}
+	&__capture {
+		font-family: "Montserrat";
+		font-size: rem(24px);
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		gap: rem(10px);
+		line-height: 1.24;
+
+		margin-bottom: rem(20px);
+		&::before {
+			font-size: rem(23px);
+		}
+	}
+	&__list {
+		margin-left: rem(10px);
+		color: $gray;
+	}
+
+	&__item {
+		list-style: disc;
+		margin-bottom: rem(16px);
+	}
+}
+
+.tour-prices {
+	color: #000;
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		border-bottom: 1px solid #000000c9;
+		padding: rem(33px) rem(15px);
+	}
+
+	&__type,
+	&__cost {
+		font-size: rem(20px);
+		line-height: 1.2;
+	}
+	&__cost {
+		font-weight: bold;
+	}
+}
+.tour-data {
+	padding-top: rem(33px);
+	&__main {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24px);
+		margin-bottom: rem(76px);
+	}
+
+	&__link {
+		color: $orange;
+		text-decoration: underline;
+		font-size: rem(18px);
+	}
+
+	&__send {
+		color: $titleColor;
+	}
+}
+
+.tour-includes {
+	padding: rem(5px) rem(9px);
+	&__capture {
+		color: $azul;
+	}
+}
+.tour-options {
+	padding: rem(5px) rem(9px);
+	&__capture {
+		color: #000000;
+	}
+}
+
+@media (max-width: $md1) {
+	.tour-info {
+		&__main {
+			column-gap: rem(50px);
+			padding: rem(0px) rem(20px) rem(114px) 0px;
+		}
+		&__wrapper {
+			gap: rem(10px);
+		}
+	}
+}
+@media (max-width: 1000px) {
+	.tour-info {
+		&__inner {
+			margin-bottom: rem(50px);
+			padding-top: rem(40px);
+		}
+		&__main {
+			padding: rem(0px) rem(0px) rem(45px);
+			grid-template-areas:
+				"prices prices prices"
+				" wrapper wrapper data"
+				" wrapper wrapper .";
+			row-gap: rem(50px);
+		}
+		&__wrapper {
+			flex-direction: column;
+		}
+		&__includes,
+		&__options {
+			width: 100%;
+		}
+		&__title {
+			margin-bottom: rem(25px);
+			font-size: rem(54px);
+		}
+	}
+	.tour-data {
+		padding-top: 0;
+	}
+}
+@media (max-width: 660px) {
+	.tour-info {
+		&__inner {
+			margin-bottom: rem(36px);
+			padding-top: rem(40px);
+		}
+		&__title {
+			margin-bottom: rem(20px);
+		}
+		&__main {
+			padding: rem(0px) rem(5px) rem(10px);
+			column-gap: rem(20px);
+			position: relative;
+		}
+	}
+}
+@media (max-width: 600px) {
+	.tour-prices {
+		&__item {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: rem(13px);
+			padding: rem(15px) rem(10px);
+		}
+	}
+	.tour-info {
+		&__main {
+			grid-template: repeat(3, auto) 100px / 1fr;
+			grid-template-areas:
+				"prices "
+				" data"
+				"wrapper"
+				".";
+		}
+		&__wrapper {
+			gap: rem(25px);
+			margin-bottom: rem(20px);
+		}
+		&__data {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		&__title {
+			font-size: rem(44px);
+			margin-bottom: rem(25px);
+		}
+	}
+	.tour-data {
+		&__main {
+			position: absolute;
+			margin: 0;
+			left: 0;
+			bottom: rem(50px);
+		}
+	}
+}
+@media (max-width: $md4) {
+	.tour-info {
+		&__title {
+			font-size: rem(35px);
+		}
+		&__capture {
+			font-size: rem(22px);
+		}
+	}
+}

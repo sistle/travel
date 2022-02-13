@@ -1,0 +1,24 @@
+.services {
+	&__title {
+		font-size: rem(20px);
+		font-weight: bold;
+		font-family: "Montserrat";
+		margin-bottom: rem(31px);
+	}
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid ;
+		padding: rem(16px) rem(20px);
+	}
+
+	&__type {
+		font-weight: bold;
+	}
+
+	&__desc {
+		flex: 0 1 rem(250px);
+		font-size: rem(14px);
+		line-height: 1.7;
+	}
+}

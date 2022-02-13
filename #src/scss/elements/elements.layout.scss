@@ -1,0 +1,32 @@
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: $fontSize;
+
+	@media (max-width: $md2) {
+		font-size: 16px;
+	}
+	@media (max-width: $md3) {
+		font-size: 14px;
+	}
+	@media (max-width: $md4) {
+		font-size: 12px;
+	}
+}
+
+body {
+	color: $blackDark;
+	font-family:  $fontFamily ,Arial,sans-serif;
+
+	font-weight: $fontBase;
+	line-height: $lhBase;
+
+	text-size-adjust: 100%;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
