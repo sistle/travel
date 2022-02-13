@@ -694,11 +694,11 @@ body.lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-appearance: none;
   font-family: inherit;
   text-align: center;
   color: inherit;
   outline: none;
-  cursor: pointer;
   border: 1px solid;
   padding: 1rem 0.9375rem;
   border-radius: 3.125rem;
@@ -2097,6 +2097,9 @@ button.swiper-pagination-bullet {
   color: inherit;
   font-weight: 500;
   padding: 0.625rem 0px;
+  -webkit-transition: color 0.2s ease 0s;
+  -o-transition: color 0.2s ease 0s;
+  transition: color 0.2s ease 0s;
 }
 
 .intro-bg {
@@ -5687,6 +5690,10 @@ button.swiper-pagination-bullet {
   }
 
   .social__link:hover {
+    color: #f47648;
+  }
+
+  .menu__link:hover {
     color: #f47648;
   }
 
