@@ -91,7 +91,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+git commit -m "first commit"
 
 # Gatsby files
 .cache/
