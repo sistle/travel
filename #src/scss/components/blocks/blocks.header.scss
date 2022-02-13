@@ -90,6 +90,12 @@
 		color: inherit;
 		font-weight: 500;
 		padding: rem(10px) 0px;
+		transition: color 0.2s ease 0s;
+		@media (any-hover:hover){
+			&:hover{
+				color:$orange;
+			}
+		};
 	}
 }
 @media (max-width: $md2) {

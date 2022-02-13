@@ -3,13 +3,12 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-
+	-webkit-appearance: none;
 	font-family: inherit;
 	text-align: center;
 
 	color: inherit;
 	outline: none;
-	cursor:pointer;
 	border: 1px solid;
 	padding: rem(16px) rem(15px);
 	border-radius: rem(50px);
@@ -17,7 +16,7 @@
 	text-transform: uppercase;
 	transition: all 0.3s ease;
 	&:focus {
-		border-color:$orange;
+		border-color: $orange;
 	}
 	&--orange {
 		border: 0px;
